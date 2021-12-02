@@ -1,4 +1,7 @@
-#include "Game.hpp"
+#include "../header/Game.hpp"
+
+SDL_Texture* playerTex;
+SDL_Rect srcR, destR;
 
 Game::Game() {
 
@@ -20,13 +23,17 @@ void Game::init(const char* title, int xpos, int ypos, int width, int height, bo
 			std::cout << "Window Created." << std::endl;
 		renderer = SDL_CreateRenderer(window, -1, 0);
 		if (renderer) {
-			SDL_SetRenderDrawColor(renderer, 255, 255, 255, 255);
+			SDL_SetRenderDrawColor(renderer, 0, 0, 255, 255);
 			std::cout << "Renderer Created." << std::endl;
 		}
 		isRunning = true;
 	}
 	else
-		isRunning - false;
+		isRunning = false;
+
+	SDL_Surface* tmpSurface = IMG_Load("assets/sprite1.png");
+	playerTex = SDL_CreateTextureFromSurface(renderer, tmpSurface);
+	SDL_FreeSurface(tmpSurface);
 }
 
 void Game::handleEvents() {
@@ -42,12 +49,18 @@ void Game::handleEvents() {
 }
 
 void Game::update() {
-
+	cnt++;
+	destR.h = 60;
+	destR.w = 60;
+	destR.x = cnt;
+	std::cout << cnt << std::endl;
 }
 
 void Game::render() {
 	SDL_RenderClear(renderer);
-
+	//add textures to be rendered in order
+	SDL_RenderCopy(renderer, playerTex, NULL, &destR);
+	//
 	SDL_RenderPresent(renderer);
 }
 
