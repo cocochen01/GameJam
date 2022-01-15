@@ -72,23 +72,23 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>C:\Users\cococ\source\repos\SDL2\SDL2_image-2.0.5\include;C:\Users\cococ\source\repos\SDL2\SDL2-2.0.16\include;$(IncludePath)</IncludePath>
-    <LibraryPath>C:\Users\cococ\source\repos\SDL2\SDL2_image-2.0.5\lib\x86;C:\Users\cococ\source\repos\SDL2\SDL2-2.0.16\lib\x86;$(LibraryPath)</LibraryPath>
+    <IncludePath>C:\SDL2\SDL2_image-2.0.5\include;C:\SDL2\SDL2-2.0.16\include;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\SDL2\SDL2_image-2.0.5\lib\x86;C:\SDL2\SDL2-2.0.16\lib\x86;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
-    <IncludePath>C:\Users\cococ\source\repos\SDL2\SDL2_image-2.0.5\include;C:\Users\cococ\source\repos\SDL2\SDL2-2.0.16\include;$(IncludePath)</IncludePath>
-    <LibraryPath>C:\Users\cococ\source\repos\SDL2\SDL2_image-2.0.5\lib\x86;C:\Users\cococ\source\repos\SDL2\SDL2-2.0.16\lib\x86;$(LibraryPath)</LibraryPath>
+    <IncludePath>C:\SDL2\SDL2_image-2.0.5\include;C:\SDL2\SDL2-2.0.16\include;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\SDL2\SDL2_image-2.0.5\lib\x86;C:\SDL2\SDL2-2.0.16\lib\x86;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>C:\Users\cococ\source\repos\SDL2\SDL2_image-2.0.5\include;C:\Users\cococ\source\repos\SDL2\SDL2-2.0.16\include;$(IncludePath)</IncludePath>
-    <LibraryPath>C:\Users\cococ\source\repos\SDL2\SDL2_image-2.0.5\lib\x86;C:\Users\cococ\source\repos\SDL2\SDL2-2.0.16\lib\x86;$(LibraryPath)</LibraryPath>
+    <IncludePath>C:\SDL2\SDL2_image-2.0.5\include;C:\SDL2\SDL2-2.0.16\include;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\SDL2\SDL2_image-2.0.5\lib\x86;C:\SDL2\SDL2-2.0.16\lib\x86;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
-    <IncludePath>C:\Users\cococ\source\repos\SDL2\SDL2_image-2.0.5\include;C:\Users\cococ\source\repos\SDL2\SDL2-2.0.16\include;$(IncludePath)</IncludePath>
-    <LibraryPath>C:\Users\cococ\source\repos\SDL2\SDL2_image-2.0.5\lib\x86;C:\Users\cococ\source\repos\SDL2\SDL2-2.0.16\lib\x86;$(LibraryPath)</LibraryPath>
+    <IncludePath>C:\SDL2\SDL2_image-2.0.5\include;C:\SDL2\SDL2-2.0.16\include;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\SDL2\SDL2_image-2.0.5\lib\x86;C:\SDL2\SDL2-2.0.16\lib\x86;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -96,12 +96,12 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>C:\Users\cococ\source\repos\SDL2\SDL2_image-2.0.5\include;C:\Users\cococ\source\repos\SDL2\SDL2-2.0.16\include;C:\Users\cococ\source\repos\SDL2\SDL2_image-2.0.5\include;C:\Users\cococ\source\repos\SDL2\SDL2_ttf-2.0.15\include;C:\Users\cococ\source\repos\SDL2\SDL2-2.0.16\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\SDL2\SDL2_image-2.0.5\include;C:\SDL2\SDL2-2.0.16\include;C:\SDL2\SDL2_image-2.0.5\include;C:\SDL2\SDL2_ttf-2.0.15\include;C:\SDL2\SDL2-2.0.16\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>C:\Users\cococ\source\repos\SDL2\SDL2_image-2.0.5\lib\x86;C:\Users\cococ\source\repos\SDL2\SDL2-2.0.16\lib\x86;C:\Users\cococ\source\repos\SDL2\SDL2_image-2.0.5\lib\x86;C:\Users\cococ\source\repos\SDL2\SDL2-2.0.16\lib\x86;C:\Users\cococ\source\repos\SDL2\SDL2_ttf-2.0.15\lib\x86;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>C:\SDL2\SDL2_image-2.0.5\lib\x86;C:\SDL2\SDL2-2.0.16\lib\x86;C:\SDL2\SDL2_image-2.0.5\lib\x86;C:\SDL2\SDL2-2.0.16\lib\x86;C:\SDL2\SDL2_ttf-2.0.15\lib\x86;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalDependencies>SDL2.lib;SDL2main.lib;SDL2_image.lib</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
@@ -113,14 +113,14 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>C:\Users\cococ\source\repos\SDL2\SDL2_image-2.0.5\include;C:\Users\cococ\source\repos\SDL2\SDL2-2.0.16\include;C:\Users\cococ\source\repos\SDL2\SDL2_image-2.0.5\include;C:\Users\cococ\source\repos\SDL2\SDL2_ttf-2.0.15\include;C:\Users\cococ\source\repos\SDL2\SDL2-2.0.16\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\SDL2\SDL2_image-2.0.5\include;C:\SDL2\SDL2-2.0.16\include;C:\SDL2\SDL2_image-2.0.5\include;C:\SDL2\SDL2_ttf-2.0.15\include;C:\SDL2\SDL2-2.0.16\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>C:\Users\cococ\source\repos\SDL2\SDL2_image-2.0.5\lib\x86;C:\Users\cococ\source\repos\SDL2\SDL2-2.0.16\lib\x86;C:\Users\cococ\source\repos\SDL2\SDL2_image-2.0.5\lib\x86;C:\Users\cococ\source\repos\SDL2\SDL2-2.0.16\lib\x86;C:\Users\cococ\source\repos\SDL2\SDL2_ttf-2.0.15\lib\x86;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>C:\SDL2\SDL2_image-2.0.5\lib\x86;C:\SDL2\SDL2-2.0.16\lib\x86;C:\SDL2\SDL2_image-2.0.5\lib\x86;C:\SDL2\SDL2-2.0.16\lib\x86;C:\SDL2\SDL2_ttf-2.0.15\lib\x86;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalDependencies>SDL2.lib;SDL2main.lib;SDL2_image.lib</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
@@ -130,12 +130,12 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>C:\Users\cococ\source\repos\SDL2\SDL2_image-2.0.5\include;C:\Users\cococ\source\repos\SDL2\SDL2-2.0.16\include;</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\SDL2\SDL2_image-2.0.5\include;C:\SDL2\SDL2-2.0.16\include;</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>C:\Users\cococ\source\repos\SDL2\SDL2_image-2.0.5\lib\x86;C:\Users\cococ\source\repos\SDL2\SDL2-2.0.16\lib\x86;</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>C:\SDL2\SDL2_image-2.0.5\lib\x86;C:\SDL2\SDL2-2.0.16\lib\x86;</AdditionalLibraryDirectories>
       <AdditionalDependencies>SDL2.lib;SDL2main.lib;SDL2_image.lib</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
@@ -147,14 +147,14 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>C:\Users\cococ\source\repos\SDL2\SDL2_image-2.0.5\include;C:\Users\cococ\source\repos\SDL2\SDL2-2.0.16\include;</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\SDL2\SDL2_image-2.0.5\include;C:\SDL2\SDL2-2.0.16\include;</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>C:\Users\cococ\source\repos\SDL2\SDL2_image-2.0.5\lib\x86;C:\Users\cococ\source\repos\SDL2\SDL2-2.0.16\lib\x86;</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>C:\SDL2\SDL2_image-2.0.5\lib\x86;C:\SDL2\SDL2-2.0.16\lib\x86;</AdditionalLibraryDirectories>
       <AdditionalDependencies>SDL2.lib;SDL2main.lib;SDL2_image.lib</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
