@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|Win32">
@@ -96,7 +96,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>C:\Users\cococ\source\repos\SDL2\SDL2_image-2.0.5\include;C:\Users\cococ\source\repos\SDL2\SDL2_ttf-2.0.15\include;C:\Users\cococ\source\repos\SDL2\SDL2_image-2.0.5\include;C:\Users\cococ\source\repos\SDL2\SDL2_ttf-2.0.15\include;C:\Users\cococ\source\repos\SDL2\SDL2-2.0.16\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\cococ\source\repos\SDL2\SDL2_image-2.0.5\include;C:\Users\cococ\source\repos\SDL2\SDL2-2.0.16\include;C:\Users\cococ\source\repos\SDL2\SDL2_image-2.0.5\include;C:\Users\cococ\source\repos\SDL2\SDL2_ttf-2.0.15\include;C:\Users\cococ\source\repos\SDL2\SDL2-2.0.16\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -113,7 +113,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>C:\Users\cococ\source\repos\SDL2\SDL2_image-2.0.5\include;C:\Users\cococ\source\repos\SDL2\SDL2_ttf-2.0.15\include;C:\Users\cococ\source\repos\SDL2\SDL2_image-2.0.5\include;C:\Users\cococ\source\repos\SDL2\SDL2_ttf-2.0.15\include;C:\Users\cococ\source\repos\SDL2\SDL2-2.0.16\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\cococ\source\repos\SDL2\SDL2_image-2.0.5\include;C:\Users\cococ\source\repos\SDL2\SDL2-2.0.16\include;C:\Users\cococ\source\repos\SDL2\SDL2_image-2.0.5\include;C:\Users\cococ\source\repos\SDL2\SDL2_ttf-2.0.15\include;C:\Users\cococ\source\repos\SDL2\SDL2-2.0.16\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -130,7 +130,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>C:\Users\cococ\source\repos\SDL2\SDL2_image-2.0.5\include;C:\Users\cococ\source\repos\SDL2\SDL2_ttf-2.0.15\include;</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\cococ\source\repos\SDL2\SDL2_image-2.0.5\include;C:\Users\cococ\source\repos\SDL2\SDL2-2.0.16\include;</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -147,7 +147,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>C:\Users\cococ\source\repos\SDL2\SDL2_image-2.0.5\include;C:\Users\cococ\source\repos\SDL2\SDL2_ttf-2.0.15\include;</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\cococ\source\repos\SDL2\SDL2_image-2.0.5\include;C:\Users\cococ\source\repos\SDL2\SDL2-2.0.16\include;</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -159,11 +159,27 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="source/Game.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="source/Game.cpp" />
+    <ClCompile Include="source/TextureManager.cpp" />
+    <ClCompile Include="source/GameObject.cpp" />
+    <ClCompile Include="source\Map.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="header/Game.hpp" />
+    <ClInclude Include="header/TextureManager.hpp" />
+    <ClInclude Include="header/GameObject.hpp" />
+    <ClInclude Include="header\Map.hpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="assets/sprite1.png" />
+    <Image Include="assets\enemy1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="libpng16-16.dll" />
+    <None Include="SDL2.dll" />
+    <None Include="SDL2_image.dll" />
+    <None Include="zlib1.dll" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
