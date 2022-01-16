@@ -62,8 +62,8 @@ Vector2D& Vector2D::operator*(const int& i) {
 	return *this;
 }
 Vector2D& Vector2D::Zero() {
-	this->x = 0;
-	this->y = 0;
+	this->x = 100;
+	this->y = 100;
 	return *this;
 }
 

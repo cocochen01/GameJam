@@ -14,7 +14,7 @@ SDL_Event Game::event;
 std::vector<ColliderComponent*> Game::colliders;
 
 auto& player(manager.addEntity());
-auto& wall(manager.addEntity());
+auto& tile(manager.addEntity());
 
 enum groupLabels : std::size_t {
 	groupMap,
@@ -49,17 +49,21 @@ void Game::init(const char* title, int xpos, int ypos, int width, int height, bo
 		}
 		isRunning = true;
 	}
-	map1 = new Map();
+	map1 = new Map(32, 18);
 
-	Map::LoadMap(32, 18);
+	int** map = map1->LoadMap();
 
-	/*tile0.addComponent<TileComponent>(200, 200, 32, 32, 0);
-	tile1.addComponent<TileComponent>(250, 250, 32, 32, 1);
-	tile1.addComponent<ColliderComponent>("dirt");
-	tile2.addComponent<TileComponent>(150, 150, 32, 32, 2);
-	tile2.addComponent<ColliderComponent>("grass");*/
-
-	player.addComponent<TransformComponent>(1);
+	for (int i = 0; i < 32; i++) {
+		for (int j = 0; j < 18; j++) {
+			if (map[i][j] == 0) {
+				tile.addComponent<TileComponent>(i*40, j*40, 40, 40, 0);
+				tile.addComponent<ColliderComponent>("water");
+			}
+		}
+	}
+	//std::cout << map1->getStart().first << ", " << map1->getStart().first << std::endl;
+	//player.addComponent<TransformComponent>(40*(map1->getStart().first), 40*(map1->getStart().first));
+	player.addComponent<TransformComponent>(40 * (15), 40 * (9));
 	player.addComponent<SpriteComponent>("assets/sprite1_anim.png", true);
 	player.addComponent<KeyboardController>();
 	player.addComponent<ColliderComponent>("player");
@@ -89,7 +93,9 @@ void Game::update() {
 
 	for (auto cc : colliders) {
 
-		Collision::AABB(player.getComponent<ColliderComponent>(), *cc);
+		if (Collision::AABB(player.getComponent<ColliderComponent>(), *cc)) {
+			player.getComponent<TransformComponent>().velocity * -1;
+		}
 	}
 }
 

@@ -6,8 +6,9 @@
 #include <stdlib.h>
 #include <time.h>
 
-Map::Map() {
-	
+Map::Map(int a, int b) {
+	x = a;
+	y = b;
 }
 
 Map::~Map() {
@@ -80,28 +81,36 @@ void Map::generate(int& filled, int& currX, int& currY, int** map, int col, int 
 void Map::ProceduralGen(int** map, int col, int row) {
 	int filled = 0;
 	srand(time(0));
-	int currX = rand() % (col - 2) + 1;
-	int currY = rand() % (row - 2) + 1;
+	//int currX = rand() % (col - 2) + 1;
+	//int currY = rand() % (row - 2) + 1;
+	int currX = 15;
+	int currY = 9;
 	map[currX][currY] = 1;
+	//start = std::make_pair(currX, currY);
 	while (filled < col * row * .9) {
 		generate(filled, currX, currY, map, col, row);
 		if (filled > col * row * .8 && !(rand() % 10)) break;
 	}
 }
-void Map::LoadMap(int sizex, int sizey) {
-	int** map = new int* [sizex];
-	for (int i = 0; i < sizex; i++) {
-		map[i] = new int[sizey];
+int** Map::LoadMap() {
+	int**map = new int* [x];
+	for (int i = 0; i < x; i++) {
+		map[i] = new int[y];
 	}
-	for (int i = 0; i < sizex; i++) {
-		for (int j = 0; j < sizey; j++) {
+	for (int i = 0; i < x; i++) {
+		for (int j = 0; j < y; j++) {
 			map[i][j] = 0;
 		}
 	}
-	Map::ProceduralGen(map, sizex, sizey);
-	for (int x = 0; x < sizex; x++) {
-		for (int y = 0; y < sizey; y++) {
-			Game::AddTile(map[x][y], x * 40, y * 40);
+	Map::ProceduralGen(map, x, y);
+	for (int i = 0; i < x; i++) {
+		for (int j = 0; j < y; j++) {
+			Game::AddTile(map[i][j], i * 40, j * 40);
 		}
 	}
+	return map;
+}
+
+std::pair<int, int> Map::getStart() {
+	return Map::start;
 }
