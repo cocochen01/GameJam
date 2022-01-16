@@ -30,6 +30,9 @@
     <ClCompile Include="source\Map.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="source\Vector2D.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="header/Game.hpp">
@@ -53,7 +56,13 @@
     <ClInclude Include="header\ECS\SpriteComponent.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="header\ECS\PositionComponents.hpp">
+    <ClInclude Include="header\ECS\TransformComponents.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="header\Vector2D.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="header\ECS\KeyboardController.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

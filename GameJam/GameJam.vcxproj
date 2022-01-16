@@ -164,6 +164,7 @@
     <ClCompile Include="source/TextureManager.cpp" />
     <ClCompile Include="source/GameObject.cpp" />
     <ClCompile Include="source\Map.cpp" />
+    <ClCompile Include="source\Vector2D.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="header/Game.hpp" />
@@ -171,8 +172,10 @@
     <ClInclude Include="header/GameObject.hpp" />
     <ClInclude Include="header\ECS\Components.hpp" />
     <ClInclude Include="header\ECS\ECS.hpp" />
-    <ClInclude Include="header\ECS\PositionComponents.hpp" />
+    <ClInclude Include="header\ECS\KeyboardController.hpp" />
+    <ClInclude Include="header\ECS\TransformComponents.hpp" />
     <ClInclude Include="header\ECS\SpriteComponent.hpp" />
+    <ClInclude Include="header\Vector2D.hpp" />
     <ClInclude Include="header\Map.hpp" />
   </ItemGroup>
   <ItemGroup>
