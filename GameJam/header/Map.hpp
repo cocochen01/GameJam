@@ -1,19 +1,22 @@
-#include "Game.hpp"
+#pragma once
+#include <string>
+#include <utility>
 
 class Map {
 public:
 
-	Map();
+	Map(int x, int y);
 	~Map();
 
-	void LoadMap(int arr[20][25]);
-	void DrawMap();
+
+	static void LoadMap(std::string path, int sizex, int sizey);
+	int** LoadMap();
+	std::pair<int, int> getStart();
 
 private:
-
-	SDL_Rect src, dest;
-	SDL_Texture* dirt, * grass, * water;
-
-	int map[20][25];
+	int x, y;
+	std::pair<int, int>start;
+	void generate(int& filled, int& currX, int& currY, int** map, int col, int row);
+	void ProceduralGen(int** map, int col, int row);
 
 };
