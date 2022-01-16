@@ -159,6 +159,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="header\ECS\ECS.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="source/Game.cpp" />
     <ClCompile Include="source/TextureManager.cpp" />
