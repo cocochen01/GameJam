@@ -169,8 +169,10 @@
     <ClInclude Include="header/Game.hpp" />
     <ClInclude Include="header/TextureManager.hpp" />
     <ClInclude Include="header/GameObject.hpp" />
-    <ClInclude Include="header\Components.hpp" />
-    <ClInclude Include="header\ECS.hpp" />
+    <ClInclude Include="header\ECS\Components.hpp" />
+    <ClInclude Include="header\ECS\ECS.hpp" />
+    <ClInclude Include="header\ECS\PositionComponents.hpp" />
+    <ClInclude Include="header\ECS\SpriteComponent.hpp" />
     <ClInclude Include="header\Map.hpp" />
   </ItemGroup>
   <ItemGroup>
