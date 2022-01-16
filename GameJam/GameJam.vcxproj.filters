@@ -80,12 +80,30 @@
     <ClInclude Include="header\ECS\TileComponent.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="header\ECS\Animation.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Image Include="assets/sprite1.png">
       <Filter>Resource Files</Filter>
     </Image>
     <Image Include="assets\enemy1.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="assets/dirt.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="assets/grass.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="assets/water.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="assets/sprite1_walk.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="assets/sprite1_idle.png">
       <Filter>Resource Files</Filter>
     </Image>
   </ItemGroup>

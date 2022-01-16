@@ -5,7 +5,7 @@
 #include "../header/Vector2D.hpp"
 #include"../header/Collision.hpp"
 
-Map* map;
+Map* map1;
 Manager manager;
 
 SDL_Renderer* Game::renderer = nullptr;
@@ -49,7 +49,7 @@ void Game::init(const char* title, int xpos, int ypos, int width, int height, bo
 		}
 		isRunning = true;
 	}
-	map = new Map();
+	map1 = new Map();
 
 	Map::LoadMap(32, 18);
 
@@ -59,16 +59,16 @@ void Game::init(const char* title, int xpos, int ypos, int width, int height, bo
 	tile2.addComponent<TileComponent>(150, 150, 32, 32, 2);
 	tile2.addComponent<ColliderComponent>("grass");*/
 
-	player.addComponent<TransformComponent>(2);
-	player.addComponent<SpriteComponent>("assets/sprite1.png");
+	player.addComponent<TransformComponent>(1);
+	player.addComponent<SpriteComponent>("assets/sprite1_anim.png", true);
 	player.addComponent<KeyboardController>();
 	player.addComponent<ColliderComponent>("player");
 	player.addGroup(groupPlayers);
 
-	wall.addComponent<TransformComponent>(300.0f, 300.0f, 300, 20, 1);
+	/*wall.addComponent<TransformComponent>(300.0f, 300.0f, 300, 20, 1);
 	wall.addComponent<SpriteComponent>("assets/dirt.png");
 	wall.addComponent<ColliderComponent>("wall");
-	wall.addGroup(groupMap);
+	wall.addGroup(groupMap);*/
 }
 
 void Game::handleEvents() {
@@ -120,6 +120,6 @@ void Game::clean() {
 
 void Game::AddTile(int id, int x, int y) {
 	auto& tile(manager.addEntity());
-	tile.addComponent<TileComponent>(x, y, 20, 20, id);
+	tile.addComponent<TileComponent>(x, y, 40, 40, id);
 	tile.addGroup(groupMap);
 }

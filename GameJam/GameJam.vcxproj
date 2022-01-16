@@ -173,6 +173,7 @@
     <ClInclude Include="header/TextureManager.hpp" />
     <ClInclude Include="header/GameObject.hpp" />
     <ClInclude Include="header\Collision.hpp" />
+    <ClInclude Include="header\ECS\Animation.hpp" />
     <ClInclude Include="header\ECS\ColliderComponent.hpp" />
     <ClInclude Include="header\ECS\Components.hpp" />
     <ClInclude Include="header\ECS\ECS.hpp" />
@@ -186,6 +187,11 @@
   <ItemGroup>
     <Image Include="assets/sprite1.png" />
     <Image Include="assets\enemy1.png" />
+    <Image Include="assets/dirt.png" />
+    <Image Include="assets/grass.png" />
+    <Image Include="assets/water.png" />
+    <Image Include="assets/sprite1_walk.png" />
+    <Image Include="assets/sprite1_idle.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="libpng16-16.dll" />
