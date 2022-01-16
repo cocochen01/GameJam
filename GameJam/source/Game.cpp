@@ -63,11 +63,13 @@ void Game::handleEvents() {
 }
 
 void Game::update() {
+	Vector2D playerPos = player.getComponent<TransformComponent>().position;
 	manager.refresh();
 	manager.update();
 	if (Collision::AABB(player.getComponent<ColliderComponent>().collider,
 		wall.getComponent<ColliderComponent>().collider)) {
 		player.getComponent<TransformComponent>().scale = 1;
+		player.getComponent<TransformComponent>().position = playerPos;
 		std::cout << "wall hit" << std::endl;
 	}
 }

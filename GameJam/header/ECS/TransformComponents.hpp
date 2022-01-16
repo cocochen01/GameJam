@@ -16,21 +16,20 @@ public:
 	int speed = 3;
 
 	TransformComponent() {
-		position.x = 0.0f;
-		position.y = 0.0f;
+		position.Zero();
 	}
 	TransformComponent(int sc) {
-		position.x = 0.0f;
-		position.y = 0.0f;
+		position.Zero();
 		scale = sc;
 	}
 	TransformComponent(float x, float y) {
 		position.x = x;
-		position.y = x;
+		position.y = y;
+		//position.Zero();
 	}
 	TransformComponent(float x, float y, int h, int w, int sc) {
 		position.x = x;
-		position.y = x;
+		position.y = y;
 		height = h;
 		width = w;
 		scale = sc;
@@ -38,6 +37,7 @@ public:
 	void init() override {
 		velocity.x = 0;
 		velocity.y = 0;
+		//position.Zero();
 	}
 	void update() override {
 		position.x += velocity.x * speed;
