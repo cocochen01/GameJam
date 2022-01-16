@@ -47,6 +47,9 @@
     <ClInclude Include="header\ECS.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="header\Components.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Image Include="assets/sprite1.png">
