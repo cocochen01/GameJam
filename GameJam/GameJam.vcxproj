@@ -175,6 +175,7 @@
     <ClInclude Include="header\ECS\ColliderComponent.hpp" />
     <ClInclude Include="header\ECS\Components.hpp" />
     <ClInclude Include="header\ECS\ECS.hpp" />
+    <ClInclude Include="header\ECS\TileComponent.hpp" />
     <ClInclude Include="header\ECS\KeyboardController.hpp" />
     <ClInclude Include="header\ECS\TransformComponents.hpp" />
     <ClInclude Include="header\ECS\SpriteComponent.hpp" />
