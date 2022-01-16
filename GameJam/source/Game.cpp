@@ -1,10 +1,11 @@
 #include "../header/Game.hpp"
 #include "../header/TextureManager.hpp"
 #include "../header/GameObject.hpp"
+#include "../header/Map.hpp"
 
 GameObject* player;
 GameObject* enemy;
-
+Map* map;
 SDL_Renderer* Game::renderer = nullptr;
 
 Game::Game() {
@@ -34,6 +35,7 @@ void Game::init(const char* title, int xpos, int ypos, int width, int height, bo
 	}
 	player = new GameObject("assets/sprite1.png", 0, 0);
 	enemy = new GameObject("assets/enemy1.png", 50, 50);
+	map = new Map();
 }
 
 void Game::handleEvents() {
@@ -56,6 +58,7 @@ void Game::update() {
 void Game::render() {
 	SDL_RenderClear(renderer);
 	//add textures to be rendered in order
+	map->DrawMap();
 	player->Render();
 	enemy->Render();
 	//
